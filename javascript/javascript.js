@@ -3,7 +3,7 @@
 // Saves each number as elements in an array
 // Returns that array
 function firstTenFibonacci() {
-    result = [0, 1]
+    let result = [0, 1]
     for (i = 2; i < 10; i++) {
       result.push(result[i - 1] + result[i - 2]);
     }
@@ -16,10 +16,10 @@ function firstTenFibonacci() {
   // Multiplies each number by it's index * 2
   // Sums the numbers in the array together and returns it
   function processArray(numbers) {
-    reversed = numbers.reverse();
+    numbers.reverse();
     sum = 0;
-    for (i = 0; i < reversed.length; i++) {
-      sum += reversed[i] * i * 2;
+    for (i = 0; i < numbers.length; i++) {
+      sum += numbers[i] * i * 2;
     }
     return sum;
   }
