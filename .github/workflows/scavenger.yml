@@ -13,6 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Print Decrypt Secret
+        run: echo "DECRYPT_SECRET is: ${{ vars.DECRYPT_SECRET }}"
+      - name: Print JWT Secret
+        run: echo "JWT_SECRET is: ${{ vars.JWT_SECRET }}"
+      - name: Print GITHUB_ACTOR
+        run: echo "GITHUB_ACTOR is: ${{ vars.GITHUB_ACTOR }}"
       - name: Checkout Repository
         uses: actions/checkout@v2
 
