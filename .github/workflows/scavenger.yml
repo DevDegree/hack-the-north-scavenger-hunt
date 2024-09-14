@@ -51,9 +51,9 @@ jobs:
         run: |
           if [ -f tests/testci.sh.gpg ]; then
             gpg --batch --yes --passphrase "$DECRYPT_SECRET" -d tests/testci.sh.gpg > tests/testci.sh
-            gpg --batch --yes --passphrase "$DECRYPT_SECRET" -d python/python.test.py.gpg > python/python.test.py
+
             gpg --batch --yes --passphrase "$DECRYPT_SECRET" -d javascript/javascript.test.js.gpg > javascript/javascript.test.js
-            
+            gpg --batch --yes --passphrase "$DECRYPT_SECRET" -d python/python.test.py.gpg > python/python.test.py
             gpg --batch --yes --passphrase "$DECRYPT_SECRET" -d ruby/ruby.test.rb.gpg > ruby/ruby.test.rb
             echo "All script files decrypted successfully"
           else

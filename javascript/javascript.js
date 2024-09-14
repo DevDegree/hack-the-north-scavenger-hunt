@@ -1,1 +1,46 @@
-Ly8gZmlyc3RUZW5GaWJvbmFjY2koKQovLyBGaW5kcyB0aGUgMXN0IDEwIG51bWJlcnMgaW4gdGhlIEZpYm9uYWNjaSBTZXF1ZW5jZQovLyBTYXZlcyBlYWNoIG51bWJlciBhcyBlbGVtZW50cyBpbiBhbiBhcnJheQovLyBSZXR1cm5zIHRoYXQgYXJyYXkKZnVuY3Rpb24gZmlyc3RUZW5GaWJvbmFjY2koKSB7CiAgcmV0dXJuIFtdOwp9CgovLyBwcm9jZXNzQXJyYXkobnVtYmVycykKLy8gQXJnczogQW4gYXJyYXkgb2YgbnVtYmVycwovLyBSZXZlcnNlcyB0aGUgYXJyYXkKLy8gTXVsdGlwbGllcyBlYWNoIG51bWJlciBieSBpdCdzIGluZGV4ICogMgovLyBTdW1zIHRoZSBudW1iZXJzIGluIHRoZSBhcnJheSB0b2dldGhlciBhbmQgcmV0dXJucyBpdApmdW5jdGlvbiBwcm9jZXNzQXJyYXkobnVtYmVycykgewogIHJldHVybiAwOwp9CgovLyBwcmludEFzY2lpQ2hhcmFjdGVyKCkKLy8gQXJnczogQSBudW1iZXIKLy8gUmVtb3ZlcyBhbnkgZHVwbGljYXRlIGRpZ2l0cyBpbiB0aGUgbnVtYmVyCi8vIFJlcGxhY2VzIHRoZW0gd2l0aCBhIHNpbmd1bGFyIGluc3RhbmNlIGllOiAxMTAgPSAxMAovLyBNdWx0aXBsaWVzIHRoYXQgbnVtYmVyIGJ5IDQKLy8gUmV0dXJucyB0aGUgQVNDSUkgY2hhcmFjdGVyIHRoYXQgaGFzIHRoZSBzYW1lIHZhbHVlIG9mIHRoZSBudW1iZXIKZnVuY3Rpb24gcHJpbnRBc2NpaUNoYXJhY3RlcihudW1iZXIpIHsKICByZXR1cm4gJyc7Cn0KCmZpYm9uYWNjaSA9IGZpcnN0VGVuRmlib25hY2NpKCk7CnN1bW1lZCA9IHByb2Nlc3NBcnJheShmaWJvbmFjY2kpOwphc2NpaSA9IHByaW50QXNjaWlDaGFyYWN0ZXIoc3VtbWVkKTsKCmNvbnNvbGUubG9nKGFzY2lpKTs=
+// firstTenFibonacci()
+// Finds the 1st 10 numbers in the Fibonacci Sequence
+// Saves each number as elements in an array
+// Returns that array
+function firstTenFibonacci() {
+    result = [0, 1]
+    for (i = 2; i < 10; i++) {
+      result.push(result[i - 1] + result[i - 2]);
+    }
+    return [result];
+  }
+  
+  // processArray(numbers)
+  // Args: An array of numbers
+  // Reverses the array
+  // Multiplies each number by it's index * 2
+  // Sums the numbers in the array together and returns it
+  function processArray(numbers) {
+    reversed = numbers.reverse();
+    sum = 0;
+    for (i = 0; i < reversed.length; i++) {
+      sum += reversed[i] * i * 2;
+    }
+    return sum;
+  }
+  
+  // printAsciiCharacter()
+  // Args: A number
+  // Removes any duplicate digits in the number
+  // Replaces them with a singular instance ie: 110 = 10
+  // Multiplies that number by 4
+  // Returns the ASCII character that has the same value of the number
+  function printAsciiCharacter(number) {
+    const str = number.toString();
+    let charArray = str.split('');
+    let uniqueChars = [...new Set(charArray)];
+    const newString = uniqueChars.join('');
+    const newNumber = parseInt(newString);
+    return String.fromCharCode(newNumber * 4);
+  }
+  
+  fibonacci = firstTenFibonacci();
+  summed = processArray(fibonacci);
+  ascii = printAsciiCharacter(summed);
+  
+  console.log(ascii);
