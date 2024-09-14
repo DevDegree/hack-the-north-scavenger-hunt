@@ -10,7 +10,7 @@ import base64
 ## Returns that array
 def first_ten_fibonacci():
     result = [0, 1]
-    while (len(result) <= 10):
+    while (len(result) < 10):
         result.append(result[-1] + result[-2])
     return result
 
