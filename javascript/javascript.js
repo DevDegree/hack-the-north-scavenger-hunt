@@ -7,7 +7,7 @@ function firstTenFibonacci() {
     for (i = 2; i < 10; i++) {
       result.push(result[i - 1] + result[i - 2]);
     }
-    return [result];
+    return result;
   }
   
   // processArray(numbers)
