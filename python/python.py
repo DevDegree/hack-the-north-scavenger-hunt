@@ -36,8 +36,8 @@ def print_ascii_character(number):
 # If you need to run this script directly, you can add:
 if __name__ == "__main__":
     fibonacci = first_ten_fibonacci()
-    print(fibonacci)
+    #print(fibonacci)
     summed = process_array(fibonacci)
-    print(summed)
+    #print(summed)
     ascii = print_ascii_character(summed)
     print(ascii)
