@@ -16,7 +16,6 @@ def process_array(numbers):
     for i in range(len(reversed)):
         reversed[i] *= (i*2)
         sm += reversed[i]
-    
     return sm
 
 ## print_ascii_character()
