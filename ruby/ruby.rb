@@ -1,1 +1,50 @@
-IyMgZmlyc3RfdGVuX2ZpYm9uYWNjaSgpCiMjIEZpbmRzIHRoZSAxc3QgMTAgbnVtYmVycyBpbiB0aGUgRmlib25hY2NpIFNlcXVlbmNlCiMjIFNhdmVzIGVhY2ggbnVtYmVyIGFzIGVsZW1lbnRzIGluIGFuIGFycmF5CiMjIFJldHVybnMgdGhhdCBhcnJheQpkZWYgZmlyc3RfdGVuX2ZpYm9uYWNjaQogIFtdCmVuZAoKIyMgcHJvY2Vzc19hcnJheShudW1iZXJzKQojIyBBcmdzOiBBbiBhcnJheSBvZiBudW1iZXJzCiMjIFJldmVyc2VzIHRoZSBhcnJheQojIyBNdWx0aXBsaWVzIGVhY2ggbnVtYmVyIGJ5IGl0J3MgaW5kZXggKiAyCiMjIFN1bXMgdGhlIG51bWJlcnMgaW4gdGhlIGFycmF5IHRvZ2V0aGVyIGFuZCByZXR1cm5zIGl0CmRlZiBwcm9jZXNzX2FycmF5KG51bWJlcnMpCiAgMAplbmQKCiMjIHByaW50X2FzY2lpX2NoYXJhY3RlcigpCiMjIEFyZ3M6IEEgbnVtYmVyCiMjIFJlbW92ZXMgYW55IGR1cGxpY2F0ZSBkaWdpdHMgaW4gdGhlIG51bWJlcgojIyBSZXBsYWNlcyB0aGVtIHdpdGggYSBzaW5ndWxhciBpbnN0YW5jZSBpZTogMTEwID0gMTAKIyMgTXVsdGlwbGllcyB0aGF0IG51bWJlciBieSA0CiMjIFJldHVybnMgdGhlIEFTQ0lJIGNoYXJhY3RlciB0aGF0IGhhcyB0aGUgc2FtZSB2YWx1ZSBvZiB0aGUgbnVtYmVyCmRlZiBwcmludF9hc2NpaV9jaGFyYWN0ZXIobnVtYmVyKQogICAgJycKZW5kCgpmaWJvbmFjY2kgPSBmaXJzdF90ZW5fZmlib25hY2NpKCkKc3VtbWVkID0gcHJvY2Vzc19hcnJheShmaWJvbmFjY2kpCmFzY2lpID0gcHJpbnRfYXNjaWlfY2hhcmFjdGVyKHN1bW1lZCkKCnB1dHMgYXNjaWkK
+## first_ten_fibonacci()
+## Finds the 1st 10 numbers in the Fibonacci Sequence
+## Saves each number as elements in an array
+## Returns that array
+def first_ten_fibonacci
+    [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+  end
+  
+  ## process_array(numbers)
+  ## Args: An array of numbers
+  ## Reverses the array
+  ## Multiplies each number by it's index * 2
+  ## Sums the numbers in the array together and returns it
+  def process_array(numbers)
+    reversed = numbers.reverse
+    sm = 0
+    reversed.each_with_index do |num, i|
+      reversed[i] *= (i * 2)
+      sm += reversed[i]
+    end
+    sm
+  end
+  
+  ## print_ascii_character()
+  ## Args: A number
+  ## Removes any duplicate digits in the number
+  ## Replaces them with a singular instance ie: 110 = 10
+  ## Multiplies that number by 4
+  ## Returns the ASCII character that has the same value of the number
+  def print_ascii_character(number)
+    num_str = number.to_s
+    seen = Set.new
+    sing_instance = ""
+  
+    num_str.each_char do |c|
+      unless seen.include?(c)
+        sing_instance += c
+        seen.add(c)
+      end
+    end
+  
+    sing_instance = sing_instance.to_i * 4
+    sing_instance.chr
+  end
+  
+  fibonacci = first_ten_fibonacci()
+  summed = process_array(fibonacci)
+  ascii = print_ascii_character(summed)
+  
+  puts ascii
