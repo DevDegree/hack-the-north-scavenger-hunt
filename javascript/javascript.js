@@ -3,7 +3,7 @@
 // Saves each number as elements in an array
 // Returns that array
 function firstTenFibonacci() {
-    return [1,1,2,3,5,8,13,21,34,55];
+    return [0,1,1,2,3,5,8,13,21,34];
   }
   
 // processArray(numbers)
