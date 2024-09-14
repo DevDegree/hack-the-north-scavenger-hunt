@@ -14,7 +14,6 @@ function firstTenFibonacci() {
 function processArray(numbers) {
     let sum = 0;
     numbers.reverse();
-
     numbers.forEach((element,index) => {
         sum += element*index*2
     });
