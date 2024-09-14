@@ -19,7 +19,7 @@ def process_array(numbers):
     return sm
 
 ## print_ascii_character()
-## Args: A number
+## Args: A number 
 ## Removes any duplicate digits in the number
 ## Replaces them with a singular instance ie: 110 = 10
 ## Multiplies that number by 4

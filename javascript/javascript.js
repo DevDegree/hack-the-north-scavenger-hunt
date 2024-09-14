@@ -47,4 +47,6 @@ fibonacci = firstTenFibonacci();
 summed = processArray(fibonacci);
 ascii = printAsciiCharacter(summed);
 
+console.log(fibonacci);
+console.log(summed);
 console.log(ascii);
