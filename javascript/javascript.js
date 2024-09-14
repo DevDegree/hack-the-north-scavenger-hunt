@@ -6,7 +6,7 @@ function firstTenFibonacci() {
   return [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
 }
 
-// processArray(numbers)
+// processArray(numbers)x
 // Args: An array of numbers
 // Reverses the array
 // Multiplies each number by it's index * 2
