@@ -32,9 +32,8 @@ function processArray(numbers) {
 function printAsciiCharacter(number) {
     let text = number.toString();
     let newText = Array.from(new Set(text.split(''))).toString().replace(",","")
-    console.log(newText)
 
-    let num = Number(newText)
+    let num = Number(newText)*4
     return String.fromCharCode(num);
 }
 
