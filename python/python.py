@@ -30,7 +30,7 @@ def print_ascii_character(number):
 
 
 # If you need to run this script directly, you can add:
-if _name_ == "_main_":
+if __name__ == "_main_":
     fibonacci = first_ten_fibonacci()
     summed = process_array(fibonacci)
     ascii = print_ascii_character(summed)
